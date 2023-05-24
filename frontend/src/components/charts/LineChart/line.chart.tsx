@@ -12,6 +12,9 @@ option = {
     trigger: 'axis'
   },
   legend: {
+    type: 'scroll',
+    left: 'center',
+    top: 30,
     data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
   },
   grid: {
@@ -19,11 +22,6 @@ option = {
     right: '4%',
     bottom: '3%',
     containLabel: true
-  },
-  toolbox: {
-    feature: {
-      saveAsImage: {}
-    }
   },
   xAxis: {
     type: 'category',
@@ -69,8 +67,6 @@ option = {
 
 
 export const LineChart: React.FC = () => {
-
- 
 
   return  (
     <BaseChart

@@ -9,10 +9,11 @@ export interface BaseChartProps {
   height?: string | number;
   style?: CSSProperties;
   classname?: string;
+  echartRef?: any;
 }
 
 
-export const BaseChart: React.FC<BaseChartProps> = ({ option, width, height, onEvents, style, ...props }) => {
+export const BaseChart: React.FC<BaseChartProps> = ({ option, width, height, onEvents, style, echartRef, ...props }) => {
 
   const chartHeight = height || '400px';
   const chartWidth = width || '100%';
@@ -21,8 +22,9 @@ export const BaseChart: React.FC<BaseChartProps> = ({ option, width, height, onE
     <ReactECharts
       {...props}
       option={option }
-      style={{ ...style, height: chartHeight, width: chartWidth , zIndex: 0 }}
+      style={{ ...style, height: chartHeight, width: chartWidth , minWidth: '100%', maxWidth: '100%', zIndex: 0 }}
       onEvents={onEvents}
+      ref={echartRef}
     />
   );
 };
