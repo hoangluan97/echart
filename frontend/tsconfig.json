@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": [
+      "es5",
+      "es6",
+      "dom.iterable",
+      "esnext",
+      "dom"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "sourceMap": true
+  },
+  "include": [
+    "src/**/*",
+    "src/**/**/*",
+    "src/*",
+    "/*"
+, "backup/index.js", "backup/File"  ],
+  "exclude": [
+    "node_modules",
+    "**/*.md"
+  ]
+}
