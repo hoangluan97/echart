@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -19,7 +20,9 @@ func main() {
 	router := initRouter()
 
 	err := http.ListenAndServe(":8080", router)
-
+	if err == nil {
+		fmt.Println("connected")
+	}
 	if err != nil {
 		panic(err)
 	}
