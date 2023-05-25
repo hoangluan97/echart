@@ -1,5 +1,6 @@
 import ReactECharts, { EChartsOption } from 'echarts-for-react';
 import React, { CSSProperties } from 'react';
+import * as echarts from 'echarts';
 
 export interface BaseChartProps {
   option: EChartsOption;
@@ -25,6 +26,7 @@ export const BaseChart: React.FC<BaseChartProps> = ({ option, width, height, onE
       style={{ ...style, height: chartHeight, width: chartWidth , minWidth: '100%', maxWidth: '100%', zIndex: 0 }}
       onEvents={onEvents}
       ref={echartRef}
+      echarts={echarts}
     />
   );
 };

@@ -1,3 +1,4 @@
+import { AddPointChart } from '../../components/charts/AddPointChart/addpoint.chart'
 import { GradientLineChart } from '../../components/charts/GradientLineChart/gradientline.chart'
 import { LineChart } from '../../components/charts/LineChart/line.chart'
 import { ShareChart } from '../../components/charts/ShareChart/share.chart'
@@ -8,6 +9,7 @@ export const Charts = () => {
         <LineChart />     
         <GradientLineChart />  
         <ShareChart />
+        <AddPointChart />
     </div>
   )
 }
