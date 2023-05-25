@@ -1,15 +1,16 @@
 package main
 
-import {
+import (
 	"net/http"
 	"github.com/gorilla/mux"
 	"github.com/hoangluan97/echart/backend/pkg/chart"
-}
+)
 
-func initRouter() {
+
+func initRouter() *mux.Router {
 	router := mux.NewRouter()
 
-    router.PathPrefix("/static/").HandleFunc(http.StripPrefix("/static/"), chart.GetChartData)
+    router.HandleFunc("/static/", chart.GetChartData)
 
 	return router
 }
